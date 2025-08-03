@@ -34,3 +34,7 @@ body {
     padding: 0 42px;
     border-radius: 5px
 }
+
+.meaning-container {
+    display: none;
+}
