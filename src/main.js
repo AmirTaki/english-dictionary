@@ -24,6 +24,9 @@ const fetachAPI = async (word) => {
         else {
             infoTextEl.style.display = "none"
             meaningContainerEl.style.display = "block"
+            audioEl.style.display = "inline-flex";
+            titleEl.innerText = result[0].word;
+            meaningEl.innerText = result[0].meaning[0].definitions[0].definitions;
         }
     }
     catch(error){
