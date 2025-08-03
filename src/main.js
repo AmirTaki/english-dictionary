@@ -22,7 +22,8 @@ const fetachAPI = async (word) => {
             audioEl.style.display = "none"
         }
         else {
-
+            infoTextEl.style.display = "none"
+            meaningContainerEl.style.display = "block"
         }
     }
     catch(error){
