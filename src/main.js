@@ -13,6 +13,14 @@ const fetachAPI = async (word) => {
         infoTextEl.innerText = `Searching the meaning of "${word}"`;
         const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`; 
         const result = await fetch(url).then((res) => res.json())
+
+        if(result.title){
+            meaningContainerEl.style.display = "block"
+            infoTextEl.style.display = "none"
+        }
+        else {
+
+        }
     }
     catch(error){
         console.log(error);
