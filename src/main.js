@@ -8,7 +8,11 @@ const audioEl = document.getElementById("audio")
 
 const fetachAPI = async (word) => {
     try {
-        
+        infoTextEl.style.display = "block"
+        meaningContainerEl.style.display = "none"
+        infoTextEl.innerText = `Searching the meaning of "${word}"`;
+        const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`; 
+        const result = await fetch(url).then((res) => res.json())
     }
     catch(error){
 
