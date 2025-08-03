@@ -15,6 +15,7 @@ const fetachAPI = async (word) => {
         const result = await fetch(url).then((res) => res.json())
     }
     catch(error){
-
+        console.log(error);
+        infoTextEl.innerText = `an error happened, try again later`;
     }
 }
