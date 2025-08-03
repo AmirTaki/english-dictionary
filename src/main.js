@@ -1,7 +1,7 @@
 const inputEl = document.getElementById("input")
 const infoTextEl = document.getElementById("info-text")
 const meaningContainerEl = document.getElementById("meaning-container")
-const title = document.getElementById("title")
+const titleEl = document.getElementById("title")
 const meaningEl = document.getElementById("meaning")
 const audioEl = document.getElementById("audio")
 
@@ -17,6 +17,9 @@ const fetachAPI = async (word) => {
         if(result.title){
             meaningContainerEl.style.display = "block"
             infoTextEl.style.display = "none"
+            titleEl.innerText = word;
+            meaningEl.innerText = "N/A";
+            audioEl.style.display = "none"
         }
         else {
 
