@@ -35,3 +35,9 @@ const fetachAPI = async (word) => {
         infoTextEl.innerText = `an error happened, try again later`;
     }
 }
+
+inputEl.addEventListener("keyup", (e) => {
+    if(e.target.value && e.key === "Enter"){
+        fetachAPI(e.target.value)
+    }
+})
