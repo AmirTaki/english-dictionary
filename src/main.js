@@ -27,6 +27,7 @@ const fetachAPI = async (word) => {
             audioEl.style.display = "inline-flex";
             titleEl.innerText = result[0].word;
             meaningEl.innerText = result[0].meaning[0].definitions[0].definitions;
+            audioEl.src = result[0].phonetics[0].audio;
         }
     }
     catch(error){
